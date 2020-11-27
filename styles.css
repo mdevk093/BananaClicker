@@ -44,8 +44,13 @@
     left: 50%;
 }
 
+.score h3{
+    font-family: 'Montserrat', sans-serif;
+}
+
 .score span{
     font-size: xx-large;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .info{
@@ -129,5 +134,21 @@
 
 .purchase h4{
     padding-top: 15px;
+}
+
+.persecond{
+    position: absolute;
+    left: 50%;
+    bottom: 250px;
+    transform: translate(-50%,-50%);
+}
+
+.persecond h4{
+    font-family: 'Montserrat', sans-serif;
+    font-size: x-large;
+}
+
+.persecond span{
+    font-family: 'Montserrat', sans-serif;
 }
 

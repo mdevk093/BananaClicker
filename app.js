@@ -12,8 +12,10 @@ const factoryTotal = document.querySelector(".factoryTotal");
 const bankTotal = document.querySelector(".bankTotal");
 
 const displayScore = document.querySelector(".score span");
+const psecond = document.querySelector(".psecond");
 
 var score = 0;
+var persecond = 0;
 
 var monkey = 0;
 var mine = 0;
@@ -57,11 +59,12 @@ click.addEventListener('click', () =>{
 
 
 clickMonkey.addEventListener('click', () =>{
-    if(score > 30){
+    if(score >= 30){
         monkey += 1;
         score -= 30;
-        displayScore.textContent = score;
+        persecond += 2;
         monkeyTotal.textContent = `x${monkey}`;
+        psecond.textContent = persecond;
         bought();
     } else{
         notEnough();
@@ -69,40 +72,44 @@ clickMonkey.addEventListener('click', () =>{
 });
 
 clickMine.addEventListener('click', () =>{
-    if(score > 100){
+    if(score >= 100){
         mine += 1;
         score -= 100;
-        displayScore.textContent = score;
+        persecond += 8;
         mineTotal.textContent = `x${mine}`;
+        psecond.textContent = persecond;
         bought();
     }
 });
 
 clickFarm.addEventListener('click', () =>{
-    if(score > 1000){
+    if(score >= 1000){
         farm += 1;
         score -= 1000;
-        displayScore.textContent = score;
+        persecond += 20;
+        psecond.textContent = persecond;
         farmTotal.textContent = `x${farm}`;
         bought();
     }
 });
 
 clickFactory.addEventListener('click', () =>{
-    if(score > 12000){
+    if(score >= 12000){
         factory += 1;
         score -= 12000;
-        displayScore.textContent = score;
+        persecond += 46;
         factoryTotal.textContent = `x${factory}`;
+        psecond.textContent = persecond;
         bought();
     }
 });
 
 clickBank.addEventListener('click', () =>{
-    if(score > 12000){
+    if(score >= 12000){
         bank += 1;
         score -= 12000;
-        displayScore.textContent = score;
+        persecond += 112;
+        psecond.textContent = persecond;
         bankTotal.textContent = `x${bank}`;
         bought();
     }
@@ -123,3 +130,4 @@ function bought(){
         show.style.display = "none";
     },1000)
 }
+
