@@ -27,6 +27,7 @@
     border-color: black;
 }
 
+
 .logo h3{
     padding-top: 15px;
     padding-bottom: 10px;
@@ -34,6 +35,11 @@
     padding-right: 20px;
     color: aqua;
 
+}
+
+.BperS:hover{
+    transform: translateY(-15px);
+    
 }
 
 .score{
@@ -69,6 +75,10 @@
 
 }
 
+.clickBanana:hover{
+    transform: translate(-50%, -60%);
+}
+
 .upgrades{
     background-color: #91ecd1;
     height: 93.8016528926vh;
@@ -79,6 +89,8 @@
     border-bottom: 0;
     border-style: solid;
     border-color: red;
+    transition: 0.5s;
+    
 }
 
 .banana-image{
@@ -106,6 +118,12 @@
     background-color: darkorange;
     text-align: center;
     border-radius: 10px;
+}
+
+
+.box:hover{
+    transform: translateY(-10px);
+    border-color: deeppink;
 }
 
 .descrip{

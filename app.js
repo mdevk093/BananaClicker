@@ -79,6 +79,8 @@ clickMine.addEventListener('click', () =>{
         mineTotal.textContent = `x${mine}`;
         psecond.textContent = persecond;
         bought();
+    } else{
+        notEnough();
     }
 });
 
@@ -90,6 +92,8 @@ clickFarm.addEventListener('click', () =>{
         psecond.textContent = persecond;
         farmTotal.textContent = `x${farm}`;
         bought();
+    } else{
+        notEnough();
     }
 });
 
@@ -101,6 +105,8 @@ clickFactory.addEventListener('click', () =>{
         factoryTotal.textContent = `x${factory}`;
         psecond.textContent = persecond;
         bought();
+    } else{
+        notEnough();
     }
 });
 
@@ -112,6 +118,8 @@ clickBank.addEventListener('click', () =>{
         psecond.textContent = persecond;
         bankTotal.textContent = `x${bank}`;
         bought();
+    } else{
+        notEnough();
     }
 });
 
