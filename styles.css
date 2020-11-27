@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0; 
+    font-family: 'Nerko One', cursive; 
+}
+
+.container{
+    background-color: beige;
+    height: 100vh;
+}
+
+.navbar{
+    width: 100%;
+    background-color: rgb(248, 193, 122);
+    height: 60px;
+    position: relative;
+}
+
+.Letgo{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    margin-right: 10px;
+    float: left;
+    border-style: solid;
+    border: 4px;
+    border-color: black;
+}
+
+.logo h3{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 20px;
+    color: aqua;
+
+}
+
+.score{
+    margin: 0;
+    float: left;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+}
+
+.score span{
+    font-size: xx-large;
+}
+
+.info{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    column-span: 10px;
+}
+
+
+
+.clickBanana{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.upgrades{
+    background-color: #91ecd1;
+    height: 93.8016528926vh;
+    overflow: auto;
+    border-left: 5px;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-style: solid;
+    border-color: red;
+}
+
+.banana-image{
+    position: relative;
+}
+
+.box{
+    height: 200px;
+    width: 80%;
+    max-width: 300px;
+    background-color: white;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+    
+}
+
+.img{
+    height: 120px;
+    width: 100%;
+    background-color: darkorange;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.descrip{
+    text-align: center;
+    color: rgb(122, 58, 13);
+}
+
+.descrip span{
+    padding-left: 10px;
+}
+
+.purchase{
+    height: 50px;
+    width: 200px;
+    background-color: yellow;
+    text-align: center;
+    margin: auto;
+    border-radius: 60px;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    display: none;
+    
+}
+
+.purchase h4{
+    padding-top: 15px;
+}
+
