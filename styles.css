@@ -72,11 +72,13 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
 
 }
 
 .clickBanana:hover{
-    transform: translate(-50%, -60%);
+    
+    filter: drop-shadow(.75em .75em 0.2em);
 }
 
 .upgrades{
@@ -95,11 +97,16 @@
 
 .banana-image{
     position: relative;
+    background-image: url("images/source.gif");
+    background-size: cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    
 }
 
 .box{
-    height: 200px;
-    width: 80%;
+    height: 210px;
+    width: 83%;
     max-width: 300px;
     background-color: white;
     margin-top: 10%;
@@ -115,14 +122,24 @@
 .img{
     height: 120px;
     width: 100%;
-    background-color: darkorange;
+    background-color: #FC766AFF;
     text-align: center;
     border-radius: 10px;
 }
 
+.img img{
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.img img:hover{
+
+    filter: drop-shadow(.75em .75em 0.8em);
+}
+
 
 .box:hover{
-    transform: translateY(-10px);
+
     border-color: deeppink;
 }
 
@@ -157,7 +174,7 @@
 .persecond{
     position: absolute;
     left: 50%;
-    bottom: 250px;
+    bottom: 15%;
     transform: translate(-50%,-50%);
 }
 

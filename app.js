@@ -14,14 +14,25 @@ const bankTotal = document.querySelector(".bankTotal");
 const displayScore = document.querySelector(".score span");
 const psecond = document.querySelector(".psecond");
 
+const displayMonkey = document.querySelector(".monkeyPrice");
+const displayMine = document.querySelector(".minePrice");
+const displayFarm = document.querySelector(".farmPrice");
+const displayFactory = document.querySelector(".factoryPrice");
+const displayBank = document.querySelector(".bankPrice");
+
 var score = 0;
 var persecond = 0;
 
 var monkey = 0;
+var monkeyPrice = 30;
 var mine = 0;
+var minePrice = 100;
 var farm = 0;
+var farmPrice = 100;
 var factory = 0;
+var factoryPrice = 12000;
 var bank = 0;
+var bankPrice = 69000;
 
 
 setInterval(() => {
@@ -55,16 +66,30 @@ setInterval(() => {
 click.addEventListener('click', () =>{
     score += 1;
     displayScore.textContent = score;
+    click.style.transition = "0.3s"
+    click.style.transform = "translate(-50%, -60%)";
+    setTimeout(() =>{
+        click.style.transform = "translate(-50%, -50%)";
+    },300)
+    
 });
 
 
 clickMonkey.addEventListener('click', () =>{
-    if(score >= 30){
+    clickMonkey.style.transition = "0.3s"
+    clickMonkey.style.transform = "translateY(-10px)";
+    setTimeout(() =>{
+        clickMonkey.style.transform = "translateY(0px)";
+    },300);
+
+    if(score >= monkeyPrice){
         monkey += 1;
-        score -= 30;
+        score -= monkeyPrice;
+        monkeyPrice = Math.ceil(monkeyPrice * 1.2);
         persecond += 2;
         monkeyTotal.textContent = `x${monkey}`;
         psecond.textContent = persecond;
+        displayMonkey.textContent = monkeyPrice;
         bought();
     } else{
         notEnough();
@@ -72,12 +97,20 @@ clickMonkey.addEventListener('click', () =>{
 });
 
 clickMine.addEventListener('click', () =>{
-    if(score >= 100){
+    clickMine.style.transition = "0.3s"
+    clickMine.style.transform = "translateY(-10px)";
+    setTimeout(() =>{
+        clickMine.style.transform = "translateY(0px)";
+    },300);
+    if(score >= minePrice){
         mine += 1;
-        score -= 100;
+        score -= minePrice;
+        minePrice = Math.ceil(minePrice * 1.2);
         persecond += 8;
         mineTotal.textContent = `x${mine}`;
         psecond.textContent = persecond;
+        displayMine.textContent = minePrice;
+        console.log(minePrice, displayMine.textContent);
         bought();
     } else{
         notEnough();
@@ -85,12 +118,19 @@ clickMine.addEventListener('click', () =>{
 });
 
 clickFarm.addEventListener('click', () =>{
-    if(score >= 1000){
+    clickFarm.style.transition = "0.3s"
+    clickFarm.style.transform = "translateY(-10px)";
+    setTimeout(() =>{
+        clickFarm.style.transform = "translateY(0px)";
+    },300);
+    if(score >= farmPrice){
         farm += 1;
-        score -= 1000;
+        score -= farmPrice;
+        farmPrice = Math.ceil(farmPrice * 1.2);
         persecond += 20;
         psecond.textContent = persecond;
         farmTotal.textContent = `x${farm}`;
+        displayFarm.textContent = farmPrice;
         bought();
     } else{
         notEnough();
@@ -98,12 +138,19 @@ clickFarm.addEventListener('click', () =>{
 });
 
 clickFactory.addEventListener('click', () =>{
-    if(score >= 12000){
+    clickFactory.style.transition = "0.3s"
+    clickFactory.style.transform = "translateY(-10px)";
+    setTimeout(() =>{
+        clickFactory.style.transform = "translateY(0px)";
+    },300);
+    if(score >= factoryPrice){
         factory += 1;
-        score -= 12000;
+        score -= factoryPrice;
+        factoryPrice = Math.ceil(factoryPrice * 1.2);
         persecond += 46;
         factoryTotal.textContent = `x${factory}`;
         psecond.textContent = persecond;
+        displayFactory.textContent = factoryPrice;
         bought();
     } else{
         notEnough();
@@ -111,12 +158,19 @@ clickFactory.addEventListener('click', () =>{
 });
 
 clickBank.addEventListener('click', () =>{
-    if(score >= 12000){
+    clickBank.style.transition = "0.3s"
+    clickBank.style.transform = "translateY(-10px)";
+    setTimeout(() =>{
+        clickBank.style.transform = "translateY(0px)";
+    },300);
+    if(score >= bankPrice){
         bank += 1;
-        score -= 12000;
+        score -= bankPrice;
+        bankPrice = Math.ceil(bankPrice * 1.2);
         persecond += 112;
         psecond.textContent = persecond;
         bankTotal.textContent = `x${bank}`;
+        displayBank.textContent = bankPrice;
         bought();
     } else{
         notEnough();
@@ -138,4 +192,3 @@ function bought(){
         show.style.display = "none";
     },1000)
 }
-
